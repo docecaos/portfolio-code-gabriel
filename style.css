@@ -106,6 +106,49 @@ body {
     color: red;
 }
 
+
+
+.callToAction {
+    position: relative;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.callToAction::after {
+    content: "";
+    position: absolute;
+    width: 5px; 
+    height: 5px;
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    animation: moveDot 5s infinite;
+}
+
+.callToAction span {
+}
+
+@keyframes moveDot {
+    0%   { top: 0; left: 0; }
+    25%  { top: 0; left: 100%; transform: translateX(-100%); }
+    50%  { top: 100%; left: 100%; transform: translate(-100%, -100%); }
+    75%  { top: 100%; left: 0; transform: translateY(-100%); }
+    100% { top: 0; left: 0; }
+}
+
+
+
+
+
 @media (max-width: 768px) {
     #hub {
         width: 90%;
