@@ -7,10 +7,53 @@
     <title>Code Gabriel</title>
 
     <link rel="shortcut icon" href="assets/coding.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css?v=1.5">
+    <link rel="stylesheet" href="style.css?v=10">
     <!-- por algum motivo tive que colocar a versão pra pegar na hostinger -->
 
-    <script src="script.js"></script>
+
+    <script>
+        function toggleProjects() {
+            const hubContainer = document.getElementById('hub-container');
+            const projectContainer = document.getElementById('project-container');
+
+            // Se o projeto estiver visível (opacity > 0), fecha. Caso contrário, abre.
+            const isProjectOpen = parseFloat(projectContainer.style.opacity) > 0 ||
+                projectContainer.style.display === 'flex';
+
+            if (!isProjectOpen) {
+                // Abrir projetos
+                hubContainer.style.overflow = "hidden";
+                hubContainer.style.opacity = '0';
+                projectContainer.style.width = '100%';
+                projectContainer.style.height = 'auto';
+
+                setTimeout(() => {
+                    hubContainer.style.display = 'none';
+                    projectContainer.style.display = 'flex';
+                }, 75);
+
+                setTimeout(() => {
+                    projectContainer.style.opacity = '1';
+                }, 150);
+            } else {
+                // Fechar projetos
+                projectContainer.style.opacity = '0';
+
+                setTimeout(() => {
+                    projectContainer.style.display = 'none';
+                    hubContainer.style.display = 'flex';
+                }, 75);
+
+                setTimeout(() => {
+                    hubContainer.style.overflow = "visible";
+                    hubContainer.style.opacity = '1';
+                    projectContainer.style.width = '0';
+                    projectContainer.style.height = '0';
+                }, 150);
+            }
+        }
+    </script>
+
 </head>
 
 <body>
@@ -27,7 +70,7 @@
                         você?</span></button>
 
 
-                <button class="hub-bnt" onclick="openProjects()"><img src="assets/project.png" alt="Portfolio"
+                <button class="hub-bnt" onclick="toggleProjects()"><img src="assets/project.png" alt="Portfolio"
                         class="hub-bnt-img invert"><span>Projetos</span></button>
 
 
@@ -70,7 +113,7 @@
 
             </div>
 
-            <button id="backToHub-project" onclick="closeProjects()">
+            <button id="backToHub-project" onclick="toggleProjects()">
                 <img src="assets/back.png" alt="voltar">
             </button>
 

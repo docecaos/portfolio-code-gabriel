@@ -162,7 +162,7 @@ body {
     background: none;
     border: none;
     width: auto;
-    height: 15px;
+    height: 20px;
     overflow: hidden;
     cursor: pointer;
 }
@@ -201,7 +201,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    #hub {
+    .box-container {
         width: 95%;
         max-width: none;
         min-height: 450px;
@@ -217,7 +217,7 @@ body {
 }
 
 @media (max-height: 600px) {
-    #hub {
+    .box-container {
         height: 95%;
         max-height: none;
     }
