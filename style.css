@@ -198,10 +198,6 @@ body {
         height: 45px;
     }
 
-    #backToHub-project {
-        position: absolute;
-        transform: translateX(-400%);
-    }
 }
 
 @media (max-width: 480px) {
