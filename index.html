@@ -7,21 +7,27 @@
     <title>Code Gabriel</title>
 
     <link rel="shortcut icon" href="assets/coding.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <!-- por algum motivo tive que colocar a versão pra pegar na hostinger -->
+
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <section id="hub-container">
-        <div id="hub">
+    <section id="hub-container" class="box">
+        <div class="box-container">
+
+
             <span class="hub-title">Code Gabriel</span>
 
             <div class="hub-bnt-container">
 
-                <button class="hub-bnt callToAction" onclick="window.alert('Ainda estou fazendo essa page...')"><span>Quer um site pra você?</span></button>
+                <button class="callToAction hub-bnt"
+                    onclick="window.alert('Ainda estou fazendo essa page...')"><span>Quer um site pra
+                        você?</span></button>
 
 
-                <button class="hub-bnt" onclick="window.alert('Ainda estou fazendo essa page...')"><img
-                        src="assets/project.png" alt="Portfolio"
+                <button class="hub-bnt" onclick="openProjects()"><img src="assets/project.png" alt="Portfolio"
                         class="hub-bnt-img invert"><span>Projetos</span></button>
 
 
@@ -47,6 +53,28 @@
             </div>
 
             <a href="https://www.instagram.com/docecaos__/" id="dc-link">doce caos</a>
+        </div>
+    </section>
+
+    <section id="project-container" class="box">
+        <div class="box-container" id="project-box">
+            
+            <button id="backToHub-project" onclick="closeProjects()">
+                <img src="assets/back.png" alt="voltar">
+            </button>
+
+            <span class="hub-title">Projetos</span>
+
+            <div class="hub-bnt-container">
+
+                <a href="http://arqueriaimperial.com.br">
+                    <button class="hub-bnt"><img src="assets/target.png" alt="Arqueria"
+                            class="hub-bnt-img invert"><span>Arqueria Imperial</span></button>
+                </a>
+
+                
+            </div>
+
         </div>
     </section>
 </body>
