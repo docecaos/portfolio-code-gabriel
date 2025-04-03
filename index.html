@@ -9,19 +9,17 @@
     <link rel="shortcut icon" href="assets/coding.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css?v=10">
     <!-- por algum motivo tive que colocar a versão pra pegar na hostinger -->
-
+    <!-- não estou gostando nenhum pouco como está formatado esse codigo  -->
 
     <script>
         function toggleProjects() {
             const hubContainer = document.getElementById('hub-container');
             const projectContainer = document.getElementById('project-container');
 
-            // Se o projeto estiver visível (opacity > 0), fecha. Caso contrário, abre.
             const isProjectOpen = parseFloat(projectContainer.style.opacity) > 0 ||
                 projectContainer.style.display === 'flex';
 
             if (!isProjectOpen) {
-                // Abrir projetos
                 hubContainer.style.overflow = "hidden";
                 hubContainer.style.opacity = '0';
                 projectContainer.style.width = '100%';
@@ -36,7 +34,6 @@
                     projectContainer.style.opacity = '1';
                 }, 150);
             } else {
-                // Fechar projetos
                 projectContainer.style.opacity = '0';
 
                 setTimeout(() => {
@@ -119,6 +116,7 @@
 
         </div>
     </section>
+
 </body>
 
 </html>
